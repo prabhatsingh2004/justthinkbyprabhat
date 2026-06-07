@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Just Think By Prabhat</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:'';
+position:fixed;
+width:500px;
+height:500px;
+background:rgba(212,175,55,.08);
+filter:blur(120px);
+top:-200px;
+right:-100px;
+z-index:-1;
+}
+
+body::after{
+content:'';
+position:fixed;
+width:400px;
+height:400px;
+background:rgba(212,175,55,.05);
+filter:blur(120px);
+bottom:-100px;
+left:-100px;
+z-index:-1;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.75);
+backdrop-filter:blur(10px);
+z-index:1000;
+border-bottom:1px solid rgba(212,175,55,.15);
+}
+
+.logo{
+font-size:24px;
+font-weight:800;
+letter-spacing:2px;
+color:#d4af37;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+nav a:hover{
+color:#d4af37;
+}
+
+.hero{
+min-height:100vh;
+padding:120px 8% 80px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:50px;
+}
+
+.hero-text{
+flex:1;
+}
+
+.hero-text h1{
+font-size:65px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero-text span{
+color:#d4af37;
+}
+
+.hero-text p{
+font-size:18px;
+color:#d0d0d0;
+margin-bottom:30px;
+line-height:1.8;
+}
+
+.btns{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:14px 28px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+transition:.4s;
+}
+
+.primary{
+background:#d4af37;
+color:black;
+}
+
+.secondary{
+border:1px solid #d4af37;
+color:#d4af37;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+.hero-image{
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+.hero-image img{
+width:400px;
+max-width:100%;
+border-radius:25px;
+border:2px solid #d4af37;
+box-shadow:0 0 40px rgba(212,175,55,.25);
+}
+
+section{
+padding:90px 8%;
+}
+
+.section-title{
+font-size:40px;
+margin-bottom:25px;
+color:#d4af37;
+}
+
+.card{
+background:#101010;
+padding:35px;
+border-radius:20px;
+border:1px solid rgba(212,175,55,.15);
+}
+
+.card p{
+line-height:1.9;
+color:#d4d4d4;
+}
+
+.countdown-box{
+margin-top:30px;
+font-size:30px;
+font-weight:700;
+color:#d4af37;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.feature{
+background:#101010;
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(212,175,55,.15);
+transition:.3s;
+}
+
+.feature:hover{
+transform:translateY(-6px);
+}
+
+.feature h3{
+color:#d4af37;
+margin-bottom:10px;
+}
+
+.socials{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+margin-top:25px;
+}
+
+.socials a{
+padding:12px 20px;
+background:#101010;
+color:#d4af37;
+text-decoration:none;
+border-radius:12px;
+border:1px solid rgba(212,175,55,.15);
+}
+
+.form{
+display:grid;
+gap:15px;
+margin-top:20px;
+}
+
+.form input,
+.form textarea{
+padding:14px;
+background:#101010;
+border:1px solid #333;
+border-radius:10px;
+color:white;
+}
+
+.form button{
+padding:14px;
+border:none;
+background:#d4af37;
+font-weight:700;
+cursor:pointer;
+border-radius:10px;
+}
+
+footer{
+padding:30px;
+text-align:center;
+border-top:1px solid rgba(212,175,55,.15);
+color:#bdbdbd;
+}
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column-reverse;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:42px;
+}
+
+.btns{
+justify-content:center;
+}
+
+nav ul{
+display:none;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+JUST THINK
+</div>
+
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#launch">Launch</a></li>
+<li><a href="#guest">Guest</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<h1>
+Just Think By <span>Prabhat</span>
+</h1>
+
+<p>
+Meaningful Conversations. Powerful Ideas. Real Stories.
+
+Explore authentic conversations with creators, entrepreneurs, athletes, artists, and inspiring personalities. Every episode is designed to help you learn, grow, and think differently.
+</p>
+
+<div class="btns">
+
+<a class="btn primary"
+href="http://www.youtube.com/@clipsofprabhat"
+target="_blank">
+Watch On YouTube
+</a>
+
+<a class="btn secondary"
+href="#guest">
+Become A Guest
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+<img src="prabhat.jpg" alt="Prabhat Singh">
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">
+About The Podcast
+</h2>
+
+<div class="card">
+
+<p>
+Welcome to Just Think by Prabhat — a podcast where meaningful conversations spark new ideas.
+
+Hosted by Prabhat Singh, each episode features creators, entrepreneurs, athletes, artists, and inspiring personalities sharing their journeys, challenges, lessons, and insights.
+
+From personal growth and career development to mindset and success, this podcast is designed to help you learn, grow, and think differently.
+
+Join us for authentic conversations that inspire action and broaden perspectives.
+</p>
+
+</div>
+
+</section>
+
+<section id="launch">
+
+<h2 class="section-title">
+The Countdown Has Started 
+</h2>
+
+<div class="card">
+
+<p>
+A new podcast experience is arriving on 18 December 2026.
+
+Real stories. Honest conversations. Game-changing insights.
+
+Creators, entrepreneurs, athletes, and changemakers — all in one place.
+
+Are you ready to think differently?
+</p>
+
+<div class="countdown-box" id="countdown"></div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Why Listen?
+</h2>
+
+<div class="features">
+
+<div class="feature">
+<h3>Real Stories</h3>
+<p>Authentic journeys from inspiring people.</p>
+</div>
+
+<div class="feature">
+<h3>Growth Mindset</h3>
+<p>Learn practical lessons and strategies.</p>
+</div>
+
+<div class="feature">
+<h3>Diverse Guests</h3>
+<p>Creators, entrepreneurs, athletes and more.</p>
+</div>
+
+<div class="feature">
+<h3>Actionable Insights</h3>
+<p>Ideas you can apply in your life immediately.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="guest">
+
+<h2 class="section-title">
+Be A Guest
+</h2>
+
+<div class="card">
+
+<p>
+Have a story, expertise, or unique perspective to share? Apply to be a guest on Just Think by Prabhat.
+</p>
+
+<div class="form">
+
+<input type="text" placeholder="Full Name">
+
+<input type="email" placeholder="Email">
+
+<input type="text" placeholder="Profession">
+
+<input type="text" placeholder="Instagram / LinkedIn">
+
+<textarea rows="5" placeholder="Why should we invite you?"></textarea>
+
+<button>
+Submit Application
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">
+Contact
+</h2>
+
+<div class="card">
+
+<p><strong>Email:</strong> singh.prabhat1812@gmail.com</p>
+<br>
+
+<p><strong>Phone:</strong> +91 8081084765</p>
+<br>
+
+<p><strong>Location:</strong> Delhi, India</p>
+
+<div class="socials">
+
+<a href="https://www.instagram.com/just_think_by_prabhat" target="_blank">Instagram</a>
+
+<a href="https://www.facebook.com/share/1HA6bAdv2M/" target="_blank">Facebook</a>
+
+<a href="http://www.youtube.com/@clipsofprabhat" target="_blank">YouTube</a>
+
+<a href="mailto:singh.prabhat1812@gmail.com">Email</a>
+
+<a href="tel:+918081084765">Call</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Just Think By Prabhat | Delhi, India
+
+</footer>
+
+<script>
+
+const launchDate = new Date("December 18, 2026 00:00:00").getTime();
+
+setInterval(() => {
+
+const now = new Date().getTime();
+
+const distance = launchDate - now;
+
+const days = Math.floor(distance / (1000*60*60*24));
+
+const hours = Math.floor(
+(distance % (1000*60*60*24)) /
+(1000*60*60)
+);
+
+const minutes = Math.floor(
+(distance % (1000*60*60)) /
+(1000*60)
+);
+
+const seconds = Math.floor(
+(distance % (1000*60)) /
+1000
+);
+
+document.getElementById("countdown").innerHTML =
+days + " Days : " +
+hours + " Hours : " +
+minutes + " Minutes : " +
+seconds + " Seconds";
+
+},1000);
+
+</script>
+
+</body>
+</html>
